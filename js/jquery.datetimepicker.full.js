@@ -2238,7 +2238,7 @@ var DateFormatter;
                                 table += '<td data-date="' + d + '" data-month="' + m + '" data-year="' + y + '"' + ' class="next-prev xdsoft_date xdsoft_day_of_week' + start.getDay() + ' ' + classes.join(' ') + '" title="' + description + '">' +
                                         '<div>' + d + '<div class="round-border"></div></div>' +
                                     '</td>';
-                                clNP = 0;
+                                
                             }else{
                                 table += '<td data-date="' + d + '" data-month="' + m + '" data-year="' + y + '"' + ' class="xdsoft_date xdsoft_day_of_week' + start.getDay() + ' ' + classes.join(' ') + '" title="' + description + '">' +
                                         '<div>' + d + '<div class="round-border"></div></div>' +
@@ -2255,7 +2255,7 @@ var DateFormatter;
                       
                         calendar.html(table);
                      
-                       // console.log(table);
+                     
 
                         mounth_picker.find('.xdsoft_label span').eq(0).text(options.i18n[globalLocale].months[_xdsoft_datetime.currentTime.getMonth()]);
                         mounth_picker.find('.xdsoft_label span').eq(1).text(_xdsoft_datetime.currentTime.getFullYear());
@@ -2366,6 +2366,7 @@ var DateFormatter;
                 .on('touchend click.xdsoft', 'td', function (xdevent) {
                     xdevent.stopPropagation();  // Prevents closing of Pop-ups, Modals and Flyouts in Bootstrap
                     timerclick += 1;
+                    clNP = 0
                     var $this = $(this),
                         currentTime = _xdsoft_datetime.currentTime;
 

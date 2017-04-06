@@ -8,9 +8,10 @@ $(document).ready(function(){
 
 		elems.animate({ transform: 't1058.9 -170 s 0.4 r180' },0);
 	}putMask()
+var defaultData = null;
 
-
-	var tt = $('#datetimepicker').datetimepicker({
+function calendarStart(defaultDate){
+	$('#datetimepicker').datetimepicker({
 		timepicker:false,
 		formatDate:'Y/m/d',
 		inline:true,
@@ -27,8 +28,8 @@ $(document).ready(function(){
                 }
 
             },
-        
-
+       
+        defaultDate :	defaultDate == null ? '' : defaultDate, 
         format: 'd,m,Y',
         dayOfWeekStart: 1,
         onGenerate: function(current_time,$input){
@@ -45,6 +46,7 @@ $(document).ready(function(){
         },
         allowDates: ['12 04 2017', '15 04 2017','20 04 2017','24 04 2017','30 04 2017','05 05 2017','10 05 2017','14 05 2017','27 05 2017','29 05 2017'], formatDate:'d m Y'
 	})
+} calendarStart();
  function onStartCalendar(){
  	var date = new Date()
 
@@ -67,17 +69,21 @@ $('article').each(function(i){
 })
 /* начало события*/
 var articleCount = $('.articles article').length;
-	calActivesBack();
-// $('.articles').css({'height':100*((+articleCount -1) /5 ) + '%'});
+calActivesBack();
 $('.articles article').eq(articleCount-1).prependTo('.articles').addClass('before');
 
  var angle = 0;
  var can = true;
+
+
 /*переключение событий	*/
  $('.next-sobitie').click(function(){
- 	if(!can){return}
+ 	nextButt();
+ });
+  function nextButt (x){
+  	if(!can){return}
  	calActivesForw();
-
+console.log(x);
  	angle = angle- 36;
  	can = false;
  	$('.articles').animate({
@@ -85,10 +91,16 @@ $('.articles article').eq(articleCount-1).prependTo('.articles').addClass('befor
  	},100,function(){
  		$('.articles article').eq(0).appendTo('.articles').addClass('before');
  		can = true;
+ 		if(!x){changeDate();}
  	})
+  }
+
+
+ $('.prev-sobitie').click(function(auto){
+ 	prevButt()
  });
- $('.prev-sobitie').click(function(){
- 	calActivesBack();
+function prevButt(x){
+	calActivesBack();
  	if(!can){return}
  	angle = angle + 36;
  	can = false;
@@ -96,9 +108,12 @@ $('.articles article').eq(articleCount-1).prependTo('.articles').addClass('befor
  		transform:'rotate('+angle+'deg)'
  	},100,function(){
  		$('.articles article').eq(articleCount-1).prependTo('.articles').addClass('before');
+ 		
  		can = true;
+ 		if(!x){changeDate();}
  	})
- });
+}
+
 
 
 function dateDiff(date){
@@ -115,30 +130,27 @@ function dateDiff(date){
 	})
 }
 function changeTill(n){
-		
-	
 	rotateTill = setInterval(function(){
 		c = $('article.active').attr('data-n');
-
+console.log(c == n);
 		if(c == n ){ clearInterval(rotateTill); return}
-		// calActivesForw();
-			c - n > 0 ? deg = $('.prev-sobitie').click() : $('.next-sobitie').click()
-		// console.log(deg);
-		// // angle =  deg;
-		// // // console.log(angle);
-	 // 	$('.articles').animate({
-	 // 		transform:'rotate('+deg+'deg)'
-	 // 	},300,function(){
-	 // 		$('.articles article').eq(articleCount-1).prependTo('.articles').addClass('before');
-
- 	// 	})
- 		
+			c - n > 0 ? deg = prevButt(1) : nextButt(1)
+	
 	},100)
 
 }
 
 
+function changeDate() {
+	var cur = $('.articles article.active div h5 time').html();
+		cur = cur.split('.')
+		cd = cur[0]
+		cm = cur[1]
+		cy = cur[2]
+	$('#datetimepicker').datetimepicker('destroy');
+	calendarStart( cd + ' ' + cm + ' ' + cy);
 
+}
 
 
 
@@ -160,6 +172,7 @@ function changeTill(n){
 		$('.articles article').eq(5).addClass('after');
 		var afisha = $('.articles article.active').attr('data-afisha');
 			$('#afisha').attr('xlink:href' ,afisha);
+		
 	}
 	function calActivesForw(){
 		$('.articles article')
@@ -179,6 +192,7 @@ function changeTill(n){
 		$('.articles article').eq(7).addClass('after');
 		var afisha = $('.articles article.active').attr('data-afisha');
 			$('#afisha').attr('xlink:href' ,afisha);
+		
 	}
 
 	//endDocready
