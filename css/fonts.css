@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'PlayfairDisplayBlack';
+    src: url('fonts/PlayfairDisplayBlack.eot');
+    src: url('fonts/PlayfairDisplayBlack.eot') format('embedded-opentype'),
+         url('fonts/PlayfairDisplayBlack.woff2') format('woff2'),
+         url('fonts/PlayfairDisplayBlack.woff') format('woff'),
+         url('fonts/PlayfairDisplayBlack.ttf') format('truetype'),
+         url('fonts/PlayfairDisplayBlack.svg#PlayfairDisplayBlack') format('svg');
+}
+@font-face {
+    font-family: 'PlayfairDisplayBold';
+    src: url('fonts/PlayfairDisplayBold.eot');
+    src: url('fonts/PlayfairDisplayBold.eot') format('embedded-opentype'),
+         url('fonts/PlayfairDisplayBold.woff2') format('woff2'),
+         url('fonts/PlayfairDisplayBold.woff') format('woff'),
+         url('fonts/PlayfairDisplayBold.ttf') format('truetype'),
+         url('fonts/PlayfairDisplayBold.svg#PlayfairDisplayBold') format('svg');
+}
+@font-face {
+    font-family: 'ResphektRegular';
+    src: url('fonts/ResphektRegular.eot');
+    src: url('fonts/ResphektRegular.eot') format('embedded-opentype'),
+         url('fonts/ResphektRegular.woff2') format('woff2'),
+         url('fonts/ResphektRegular.woff') format('woff'),
+         url('fonts/ResphektRegular.ttf') format('truetype'),
+         url('fonts/ResphektRegular.svg#ResphektRegular') format('svg');
+}
+@font-face {
+    font-family: 'PlayfairDisplayRegular';
+    src: url('fonts/PlayfairDisplayRegular.eot');
+    src: url('fonts/PlayfairDisplayRegular.eot') format('embedded-opentype'),
+         url('fonts/PlayfairDisplayRegular.woff2') format('woff2'),
+         url('fonts/PlayfairDisplayRegular.woff') format('woff'),
+         url('fonts/PlayfairDisplayRegular.ttf') format('truetype'),
+         url('fonts/PlayfairDisplayRegular.svg#PlayfairDisplayRegular') format('svg');
+}
+@font-face {
+    font-family: 'PlayfairDisplayItalic';
+    src: url('fonts/PlayfairDisplayItalic.eot');
+    src: url('fonts/PlayfairDisplayItalic.eot') format('embedded-opentype'),
+         url('fonts/PlayfairDisplayItalic.woff2') format('woff2'),
+         url('fonts/PlayfairDisplayItalic.woff') format('woff'),
+         url('fonts/PlayfairDisplayItalic.ttf') format('truetype'),
+         url('fonts/PlayfairDisplayItalic.svg#PlayfairDisplayItalic') format('svg');
+}
+@font-face {
+    font-family: 'PhenomenaRegular';
+    src: url('fonts/PhenomenaRegular.eot');
+    src: url('fonts/PhenomenaRegular.eot') format('embedded-opentype'),
+         url('fonts/PhenomenaRegular.woff2') format('woff2'),
+         url('fonts/PhenomenaRegular.woff') format('woff'),
+         url('fonts/PhenomenaRegular.ttf') format('truetype'),
+         url('fonts/PhenomenaRegular.svg#PhenomenaRegular') format('svg');
+}
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto-Regular.eot');
+    src: url('fonts/Roboto-Regular.eot') format('embedded-opentype'),
+         url('fonts/Roboto-Regular.woff') format('woff'),
+         url('fonts/Roboto-Regular.ttf') format('truetype'),
+         url('fonts/Roboto-Regular.svg#Roboto-Regular') format('svg');
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('fonts/Roboto-Bold.eot');
+    src: url('fonts/Roboto-Bold.eot') format('embedded-opentype'),
+         url('fonts/Roboto-Bold.woff') format('woff'),
+         url('fonts/Roboto-Bold.ttf') format('truetype'),
+         url('fonts/Roboto-Bold.svg#Roboto-Bold') format('svg');
+}
+@font-face {
+    font-family: 'Roboto-Black';
+    src: url('fonts/Roboto-Black.eot');
+    src: url('fonts/Roboto-Black.eot') format('embedded-opentype'),
+         url('fonts/Roboto-Black.woff') format('woff'),
+         url('fonts/Roboto-Black.ttf') format('truetype'),
+         url('fonts/Roboto-Black.svg#Roboto-Black') format('svg');
+}
